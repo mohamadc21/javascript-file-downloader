@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat';
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: dodgerblue;
+    color: black;
+}
+
+.container {
+    background-color: #fff;
+    padding: 1.5rem 2rem;
+    margin: 0 1.5rem;
+    border-radius: 4px;
+    max-width: 500px;
+    user-select: none;
+}
+
+.container header {
+    margin-bottom: 2.2rem;
+    text-align: center;
+}
+
+.container header p {
+    margin-top: 12px;
+}
+
+.container header p i {
+    margin-right: 5px;
+}
+
+form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+}
+
+form input {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    font-size: 1.1rem;
+    transition: .3s;
+    background-color: #fff;
+}
+
+form input:focus {
+    border-color: dodgerblue;
+}
+
+form input:valid {
+    border-color: dodgerblue;
+}
+
+form .placeholder {
+    position: absolute;
+    top: 22%;
+    left: 3px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #888;
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+form input:is(:focus, :valid) ~ .placeholder {
+    top: -3px;
+    left: 0;
+    font-size: 0.8rem;
+}
+
+form .placeholder.top {
+    top: -3px;
+    left: 0;
+    font-size: 0.8rem;
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    font-size: 1.1rem;
+    background-color: dodgerblue;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+form button:hover {
+    background-color: #1974cf;
+}
+
+form input:valid ~ button {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.err {
+    color: #d83939;
+    text-align: center;
+}
